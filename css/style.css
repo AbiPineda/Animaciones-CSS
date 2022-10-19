@@ -1,238 +1,346 @@
-:root{
-    --achiotado:#D06224;
-    --cafe: #AE431E;
-    --verde: #8A8635;
-    --beige: #E9C891;
-    --celeste: #8BE3E1;
-    --menta: #D3F7AD;
-    --verde-oscuro: #95BB76;
-    --pepitoria: #97935C;
-
+:root {
+  --achiotado: #d06224;
+  --cafe: #ae431e;
+  --verde: #8a8635;
+  --beige: #e9c891;
+  --celeste: #8be3e1;
+  --menta: #d3f7ad;
+  --verde-oscuro: #95bb76;
+  --pepitoria: #97935c;
+  --cafe-oscuro: #7e2e1b;
 }
 
-body{
-    counter-reset:game; /* crea o reinicia un contador */
-    margin: 0;
-    height: 100vh;
-    width: 100%;
-    /*para centrar*/
-    display: grid;
-    place-items: center;
+body {
+  counter-reset: game; /* crea o reinicia un contador */
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  /*para centrar*/
+  display: grid;
+  place-items: center;
 }
 
 input:checked {
-    counter-increment: game;/* incrementa un valor de contador */
+  counter-increment: game; /* incrementa un valor de contador */
 }
 
-.total-count::after{
-    content: counter(game);/* inserta el contenido generado (usar con pseudoelemento) */
+.total-count::after {
+  content: counter(
+    game
+  ); /* inserta el contenido generado (usar con pseudoelemento) */
 } /* counter: funcion que agrega el valor de un contador a un elemento */
 
-.phone{
-    position: relative;
-    border: 8px solid black;
-    border-radius: 40px;
-    height: 600px;
-    width: 300px;
-    background: var(--celeste);
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+.phone {
+  position: relative;
+  border: 8px solid black;
+  border-radius: 40px;
+  height: 600px;
+  width: 300px;
+  background: var(--celeste);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
-.layer-1{
-    /*conejito 1*/
-    position: absolute;
-    z-index: 1;
-    height: 450px;
-    width: 80px;
-    /*  background: white;*/ 
-    bottom: 0;
-    left: 60px;
+.layer-1 {
+  /*conejito 1*/
+  position: absolute;
+  z-index: 1;
+  height: 450px;
+  width: 80px;
+  /*  background: white;*/
+  bottom: 0;
+  left: 60px;
 }
-.layer-2{
-    /*conejito 2*/
-    position: absolute;
-    z-index: 2;
-    height: 450px;
-    width: 80px;
-   /*  background: white;*/ 
-   bottom: 0;
-    right: 60px;
+.layer-2 {
+  /*conejito 2*/
+  position: absolute;
+  z-index: 2;
+  height: 450px;
+  width: 80px;
+  /*  background: white;*/
+  bottom: 0;
+  right: 60px;
 }
-.layer-3{
-    position: absolute;
-    z-index: 3;
-    height: 400px;
-    width: 250px;
-    background: var(--cafe);
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    border-radius: 8px 8px;
+.layer-3 {
+  position: absolute;
+  z-index: 3;
+  height: 400px;
+  width: 250px;
+  background: var(--cafe);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 8px 8px;
 }
-.layer-4{
-    position: absolute;
-    z-index: 4;
-    height: 350px;
-    width: 80px;
-    /* background: white; */
-    bottom: 0;
-    left: 4%;
-    border-radius: 0px 0px 0px 30px;
+.layer-4 {
+  position: absolute;
+  z-index: 4;
+  height: 350px;
+  width: 80px;
+  /* background: white; */
+  bottom: 0;
+  left: 4%;
+  border-radius: 0px 0px 0px 30px;
 }
-.layer-5{
-    position: absolute;
-    z-index: 5;
-    height: 300px;
-    width: 180px;
-    background: var(--achiotado);
-    bottom: 0;
-    left: 0;
-    border-radius: 0px 8px 0px 30px;
+.layer-5 {
+  position: absolute;
+  z-index: 5;
+  height: 300px;
+  width: 180px;
+  background: var(--achiotado);
+  bottom: 0;
+  left: 0;
+  border-radius: 0px 8px 0px 30px;
 }
-.layer-6{
-    position: absolute;
-    z-index: 6;
-    height: 270px;
-    width: 80px;
-    /* background: white; */
-    bottom: 0;
-    right: 15%;
-    border-radius: 0px 0px 0px 0px;
+.layer-6 {
+  position: absolute;
+  z-index: 6;
+  height: 270px;
+  width: 80px;
+  /* background: white; */
+  bottom: 0;
+  right: 15%;
+  border-radius: 0px 0px 0px 0px;
 }
-.layer-7{
-    position: absolute;
-    z-index: 7;
-    height: 220px;
-    width: 180px;
-    background: var(--beige);
-    bottom: 0;
-    right: 0;
-    border-radius: 8px 0px 30px 0px;
+.layer-7 {
+  position: absolute;
+  z-index: 7;
+  height: 220px;
+  width: 180px;
+  background: var(--beige);
+  bottom: 0;
+  right: 0;
+  border-radius: 8px 0px 30px 0px;
 }
-.layer-8{
-    position: absolute;
-    z-index: 8;
-    height: 120px;
-    width: 210px;
-    background: var(--verde);
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    border-radius: 8px 8px 0 0;
+.layer-8 {
+  position: absolute;
+  z-index: 8;
+  height: 120px;
+  width: 210px;
+  /* background: var(--verde); */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 8px 8px 0 0;
 }
-.layer-9{
-    position: absolute;
-    z-index: 9;
-    height: 80px;
-    width: 120px;
-    background: var(--verde-oscuro);
-    bottom: 0;
-    left: 0;
-    border-radius: 0px 8px 0px 30px;
+.layer-9 {
+  position: absolute;
+  z-index: 9;
+  height: 80px;
+  width: 120px;
+  /* background: var(--verde-oscuro); */
+  bottom: 0;
+  left: 0;
+  border-radius: 0px 8px 0px 30px;
 }
-.layer-10{
-    position: absolute;
-    z-index: 10;
-    height: 80px;
-    width: 120px;
-    background: var(--verde-oscuro);
-    bottom: 0;
-    right: 0;
-    border-radius: 8px 0px 30px 0px;
+.layer-10 {
+  position: absolute;
+  z-index: 10;
+  height: 80px;
+  width: 120px;
+  /* background: var(--verde-oscuro); */
+  bottom: 0;
+  right: 0;
+  border-radius: 8px 0px 30px 0px;
 }
 
 /* Dibujando el conejito */
 
 /* Orejitas */
-.orejitaIzquierda{
-    background: white;
-    border-radius: 90%;
-    width: 20px;
-    height: 50px;
-    position: absolute;
-    left: 10px;
+.orejitaIzquierda {
+  background: white;
+  border-radius: 90%;
+  width: 20px;
+  height: 50px;
+  position: absolute;
+  left: 10px;
 }
-.orejitaIzquierda-interna{
-    background: pink;
-    border-radius: 90%;
-    width: 10px;
-    height: 40px;
-    position: absolute;
-    left: 15px;
-    top: 8px;
+.orejitaIzquierda-interna {
+  background: pink;
+  border-radius: 90%;
+  width: 10px;
+  height: 40px;
+  position: absolute;
+  left: 15px;
+  top: 8px;
 }
 
-.orejitaDerecha{
-    background: white;
-    border-radius: 90%;
-    width: 20px;
-    height: 50px;
-    position: absolute;
-    right: 10px;
+.orejitaDerecha {
+  background: white;
+  border-radius: 90%;
+  width: 20px;
+  height: 50px;
+  position: absolute;
+  right: 10px;
 }
-.orejitaDerecha-interna{
-    background: pink;
-    border-radius: 90%;
-    width: 10px;
-    height: 40px;
-    position: absolute;
-    right: 15px;
-    top: 8px;
+.orejitaDerecha-interna {
+  background: pink;
+  border-radius: 90%;
+  width: 10px;
+  height: 40px;
+  position: absolute;
+  right: 15px;
+  top: 8px;
 }
 
 /* Cabesita */
-.cabeza{
-    background: white;
-    border-radius: 70%;
-    width: 100%;
-    height: 80px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    position: absolute;
-    top: 30px;
+.cabeza {
+  background: white;
+  border-radius: 70%;
+  width: 100%;
+  height: 80px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: absolute;
+  top: 30px;
 }
 
 /*Ojitos*/
-.cabeza__ojitos{
-    background: black;
-    border-radius: 50%;
-    width: 4px;
-    height: 4px;
-    position: absolute;
-    top: 15px;
+.cabeza__ojitos {
+  background: black;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  top: 15px;
 }
-.cabeza__ojitos--izquierdo{
-    left: 30px;
+.cabeza__ojitos--izquierdo {
+  left: 30px;
 }
 
-.cabeza__ojitos--derecho{
-    right: 30px;
+.cabeza__ojitos--derecho {
+  right: 30px;
 }
 /* Narizita del puerco conejo */
-.nariz{
-    background: pink;
-    border-radius: 7px 7px;
-    width: 15px;
-    height: 12px;
+.nariz {
+  background: pink;
+  border-radius: 7px 7px;
+  width: 15px;
+  height: 12px;
+  position: absolute;
+  top: 52px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.nariz__puntito {
+  background: rgb(69, 69, 69);
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  top: 4px;
+}
+.nariz__puntito--izquierdo {
+  left: 9px;
+}
+.nariz__puntito--derecho {
+  right: 9px;
+}
+
+.pasto {
+  background: var(--verde);
+  height: 20px;
+  width: 100%;
+}
+.zigzag {
+  background: linear-gradient(135deg, var(--verde) 25%, transparent 25%) -50px 0,
+    linear-gradient(-135deg, var(--verde) 25%, transparent 25%) -50px 0,
+    linear-gradient(45deg, var(--cafe) 25%, transparent 25%),
+    linear-gradient(-45deg, transparent 25%, var(--cafe-oscuro) 25%);
+  background-size: 33px 30px;
+  height: 30px;
+  width: 100%;
+}
+
+.zigzag--achiotado {
+  background: linear-gradient(135deg, var(--verde) 25%, transparent 25%) -50px 0,
+    linear-gradient(-135deg, var(--verde) 25%, transparent 25%) -50px 0,
+    linear-gradient(45deg, var(--achiotado) 25%, transparent 25%),
+    linear-gradient(-45deg, transparent 25%, var(--cafe-oscuro) 25%);
+  background-size: 33px 30px;
+  height: 30px;
+  width: 100%;
+}
+
+.zigzag--beige {
+  background: linear-gradient(135deg, var(--verde) 25%, transparent 25%) -50px 0,
+    linear-gradient(-135deg, var(--verde) 25%, transparent 25%) -50px 0,
+    linear-gradient(45deg, var(--beige) 25%, transparent 25%),
+    linear-gradient(-45deg, transparent 25%, var(--cafe-oscuro) 25%);
+  background-size: 33px 30px;
+  height: 30px;
+  width: 100%;
+}
+
+/*Pasto abajo layer 8*/
+.layer-8::before{
     position: absolute;
-    top: 52px;
+    content: "";
+    width: 40%;
+    height: 70%;
+    bottom: 0;
     left: 0;
-    right: 0;
-    margin: 0 auto;
+    background: var(--verde);
+    border-radius: 100px 100px 10px 20px;
 }
-.nariz__puntito{
-    background: rgb(69, 69, 69);
-    border-radius: 50%;
-    width: 4px;
-    height: 4px;
+.layer-8::after{
     position: absolute;
-    top: 4px;
+    content: "";
+    width: 40%;
+    height: 70%;
+    bottom: 0;
+    right: 0;
+    background: var(--verde);
+    border-radius: 100px 100px 10px 20px;
 }
-.nariz__puntito--izquierdo{
-    left: 9px;
+/* pasto layer 9 */
+.layer-9::before{
+    position: absolute;
+    content: "";
+    width: 75%;
+    height: 100%;
+    background: var(--menta);
+    border-radius: 100px 100px 30px 70px;
 }
-.nariz__puntito--derecho{
-    right: 9px;
+.layer-9::after{
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 60%;
+    bottom: 0;
+    right: 0;
+    background: var(--menta);
+    border-radius: 100px;
+}
+/* pasto layer 10 */
+.layer-10::before{
+    position: absolute;
+    content: "";
+    width: 75%;
+    height: 100%;
+    right: 0;
+    background: var(--menta);
+    border-radius: 100px 100px 70px 30px;
+}
+.layer-10::after{
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 60%;
+    bottom: 0;
+    left: 0;
+    background: var(--menta);
+    border-radius: 100px;
+}
+
+.grass{
+    position: absolute;
+    width: 40%;
+    height: 90%;
+    bottom: 0;
+    left: 30%;
+    background: var(--verde);
+    border-radius: 100px 100px 10px 20px;
 }
