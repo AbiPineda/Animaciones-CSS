@@ -184,7 +184,7 @@ input:checked {
 /* Cabesita */
 .cabeza{
     background: white;
-    border-radius: 50%;
+    border-radius: 70%;
     width: 100%;
     height: 80px;
     left: 0;
@@ -209,4 +209,30 @@ input:checked {
 
 .cabeza__ojitos--derecho{
     right: 30px;
+}
+/* Narizita del puerco conejo */
+.nariz{
+    background: pink;
+    border-radius: 7px 7px;
+    width: 15px;
+    height: 12px;
+    position: absolute;
+    top: 52px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.nariz__puntito{
+    background: rgb(69, 69, 69);
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 4px;
+}
+.nariz__puntito--izquierdo{
+    left: 9px;
+}
+.nariz__puntito--derecho{
+    right: 9px;
 }
