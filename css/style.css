@@ -1,5 +1,23 @@
+:root{
+    --achiotado:#D06224;
+    --cafe: #AE431E;
+    --verde: #8A8635;
+    --beige: #E9C891;
+    --celeste: #8BE3E1;
+    --menta: #D3F7AD;
+    --verde-oscuro: #95BB76;
+    --pepitoria: #97935C;
+
+}
+
 body{
     counter-reset:game; /* crea o reinicia un contador */
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    /*para centrar*/
+    display: grid;
+    place-items: center;
 }
 
 input:checked {
@@ -9,3 +27,97 @@ input:checked {
 .total-count::after{
     content: counter(game);/* inserta el contenido generado (usar con pseudoelemento) */
 } /* counter: funcion que agrega el valor de un contador a un elemento */
+
+.phone{
+    position: relative;
+    border: 8px solid black;
+    border-radius: 40px;
+    height: 600px;
+    width: 300px;
+    background: var(--celeste);
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.layer-1{
+    /*conejito 1*/
+    position: absolute;
+    z-index: 1;
+    height: 450px;
+    width: 80px;
+    background: white;
+    bottom: 0;
+    left: 60px;
+}
+.layer-2{
+    /*conejito 2*/
+    position: absolute;
+    z-index: 2;
+    height: 450px;
+    width: 80px;
+    background: white;
+    bottom: 0;
+    right: 60px;
+}
+.layer-3{
+    position: absolute;
+    z-index: 3;
+    height: 400px;
+    width: 250px;
+    background: var(--cafe);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 8px 8px;
+}
+.layer-4{
+    position: absolute;
+    z-index: 4;
+    height: 350px;
+    width: 80px;
+    background: white;
+    bottom: 0;
+    left: 4%;
+    border-radius: 0px 0px 0px 30px;
+}
+.layer-5{
+    position: absolute;
+    z-index: 5;
+    height: 300px;
+    width: 180px;
+    background: var(--achiotado);
+    bottom: 0;
+    left: 0;
+    border-radius: 0px 8px 0px 30px;
+}
+.layer-6{
+    position: absolute;
+    z-index: 6;
+    height: 270px;
+    width: 80px;
+    background: white;
+    bottom: 0;
+    right: 15%;
+    border-radius: 0px 0px 0px 0px;
+}
+.layer-7{
+    position: absolute;
+    z-index: 7;
+    height: 220px;
+    width: 180px;
+    background: var(--beige);
+    bottom: 0;
+    right: 0;
+    border-radius: 8px 0px 30px 0px;
+}
+.layer-8{
+    position: absolute;
+    z-index: 8;
+}
+.layer-9{
+    position: absolute;
+    z-index: 9;
+}
+.layer-10{
+    position: absolute;
+    z-index: 10;
+}
