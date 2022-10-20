@@ -48,6 +48,34 @@ input:checked {
   /*  background: white;*/
   bottom: 0;
   left: 60px;
+
+  animation-name: layer;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; /*para que el conejito salte por siempre*/
+}
+@keyframes layer {
+  0%{
+    bottom: 0;
+  }
+  25%{
+    bottom: -80px;
+  }
+  100%{
+    bottom: 0px;
+  }
+  
+}
+.layer-1 input[type=checkbox],
+.layer-2 input[type="checkbox"], 
+.layer-4 input[type="checkbox"], 
+.layer-6 input[type="checkbox"]{
+  position: absolute;
+  appearance: none;
+  cursor: pointer;
+  z-index: 1;
+  width: 100%;
+  height: 80px;
 }
 .layer-2 {
   /*conejito 2*/
@@ -58,6 +86,22 @@ input:checked {
   /*  background: white;*/
   bottom: 0;
   right: 60px;
+  animation-name: conejito2;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; /*para que el conejito salte por siempre*/
+}
+@keyframes conejito2 {
+  0%{
+    bottom: 0;
+  }
+  25%{
+    bottom: -80px;
+  }
+  100%{
+    bottom: 0px;
+  }
+  
 }
 .layer-3 {
   position: absolute;
@@ -80,6 +124,38 @@ input:checked {
   bottom: 0;
   left: 4%;
   border-radius: 0px 0px 0px 30px;
+
+  animation: conejito3 3s ease-in-out infinite forwards;
+}
+@keyframes conejito3 {
+  0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	65% {
+		transform: scale3d(0.95, 1.05, 1);
+	}
+
+	75% {
+		transform: scale3d(1.05, 0.95, 1);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+  
 }
 .layer-5 {
   position: absolute;
@@ -100,7 +176,22 @@ input:checked {
   bottom: 0;
   right: 15%;
   border-radius: 0px 0px 0px 0px;
+
+  animation: conejito4 5s ease 0s infinite normal forwards;
 }
+@keyframes conejito4 {
+  0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
+
 .layer-7 {
   position: absolute;
   z-index: 7;
