@@ -23,7 +23,12 @@ body {
 input:checked {
   counter-increment: game; /* incrementa un valor de contador */
 }
-
+.total-count{
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  text-align: center;
+}
 .total-count::after {
   content: counter(
     game
@@ -38,6 +43,13 @@ input:checked {
   width: 300px;
   background: var(--celeste);
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.title{
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  margin: 45px 0 10px;
 }
 .layer-1 {
   /*conejito 1*/
